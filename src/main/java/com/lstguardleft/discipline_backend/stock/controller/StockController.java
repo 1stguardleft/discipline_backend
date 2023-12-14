@@ -21,9 +21,7 @@ public class StockController {
 
     @RequestMapping(value="/{code}", method=RequestMethod.GET)
     public String getStockInfo(@PathVariable("code") String code) throws Exception {
-
         
-
         return code;
     }
     
