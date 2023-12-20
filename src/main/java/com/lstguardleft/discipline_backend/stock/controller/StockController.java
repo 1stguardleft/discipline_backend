@@ -9,10 +9,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-
 import com.lstguardleft.discipline_backend.stock.service.StockService;
 
+import lombok.extern.slf4j.Slf4j;
+
 @RestController
+@Slf4j
 @RequestMapping(value="/api/v1/stock")
 public class StockController {
 
@@ -21,7 +23,7 @@ public class StockController {
 
     @RequestMapping(value="/{code}", method=RequestMethod.GET)
     public String getStockInfo(@PathVariable("code") String code) throws Exception {
-        
+        log.info("CODE : {}", code);
         return code;
     }
     
